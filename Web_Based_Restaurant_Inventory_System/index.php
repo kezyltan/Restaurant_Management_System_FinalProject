@@ -10,6 +10,18 @@ $priorities = ['Low', 'Normal', 'High', 'Urgent'];
 $statuses = ['Pending', 'Approved', 'For Purchase', 'Stocked', 'Rejected', 'Cancelled'];
 // Login form UI with responsive layout
 // Brand mark, username, password fields, error message area
+// Admin authentication with session handling
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
+    $username = cleanText($_POST['username'] ?? '');
+    $password = cleanText($_POST['password'] ?? '');
+    if (hash_equals(ADMIN_USERNAME, $username) && hash_equals(ADMIN_PASSWORD, $password)) {
+        startSessionSafe();
+        session_regenerate_id(true);
+        $_SESSION['admin_logged_in'] = true;
+        header('Location: index.php');
+        exit;
+    }
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $formAction = $_POST['form_action'] ?? '';
 
