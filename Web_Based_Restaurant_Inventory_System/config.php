@@ -1,6 +1,7 @@
 <?php
 // Database configuration and helper functions
 // Connects to SQLite via PDO
+// Migration logic for inventory_requests table
 const ADMIN_USERNAME = 'admin';
 const ADMIN_PASSWORD = 'admin123';
 const API_ADMIN_TOKEN = 'restaurant-admin-token-2026';
