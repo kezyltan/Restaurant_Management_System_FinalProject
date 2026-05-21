@@ -1,3 +1,7 @@
+// Admin credentials and API token constants
+define('ADMIN_USERNAME', 'admin');
+define('ADMIN_PASSWORD', 'admin123');
+define('API_ADMIN_TOKEN', 'secret-token-2024');
 <?php
 // Database configuration and helper functions
 // Connects to SQLite via PDO
