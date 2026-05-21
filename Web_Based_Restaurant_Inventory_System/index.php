@@ -8,7 +8,8 @@ $error = '';
 $categories = ['Meat', 'Vegetables', 'Seafood', 'Condiments', 'Beverages', 'Packaging', 'Cleaning Supply', 'Other'];
 $priorities = ['Low', 'Normal', 'High', 'Urgent'];
 $statuses = ['Pending', 'Approved', 'For Purchase', 'Stocked', 'Rejected', 'Cancelled'];
-
+// Login form UI with responsive layout
+// Brand mark, username, password fields, error message area
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $formAction = $_POST['form_action'] ?? '';
 
